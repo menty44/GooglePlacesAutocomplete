@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { NgxGpAutocompleteDirective } from '@angular-magic/ngx-gp-autocomplete';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('ngxPlaces')
+  placesRef!: NgxGpAutocompleteDirective;
+
   title = 'google-test';
 }
